@@ -54,7 +54,7 @@ console.log(chalk.yellow('✔ Created customers'))
 const [manager] = await db
   .insert(users)
   .values({
-    name: faker.person.fullName(),
+    name: 'Mário César Silva',
     email: 'mcgato33g@gmail.com',
     role: 'manager',
   })
@@ -68,7 +68,7 @@ console.log(chalk.yellow('✔ Created manager'))
 const [restaurant] = await db
   .insert(restaurants)
   .values({
-    name: faker.company.name(),
+    name: 'Est. Zulmira',
     description: faker.lorem.paragraph(),
     managerId: manager.id,
   })
